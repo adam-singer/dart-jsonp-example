@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Dart JSONP</title>
+  </head>
+  <body>
+    <h1>Dart JSONP</h1>
+    <script type="text/javascript">
+	function callbackForJsonpApi(data) {
+	  dartCallback(JSON.stringify(data));
+	}
+	</script>
+    
+    <script type="application/dart" src="DartJSONP.dart"></script>
+    <script src="http://dart.googlecode.com/svn/branches/bleeding_edge/dart/client/dart.js"></script>
+  </body>
+</html>
