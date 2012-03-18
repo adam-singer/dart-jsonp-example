@@ -9,7 +9,7 @@ dataReceived(MessageEvent e) {
     <div> 
       <div>${newsItem['title']}</div>
       <div>${newsItem['content']}</div>
-      <div><a href="${newsItem['url']}" >Full Story</a></div>
+      <div><a href="${newsItem['signedRedirectUrl']}" >Full Story</a></div>
       <br/>
     </div>"""));
   });
@@ -20,6 +20,6 @@ void main() {
   window.on.message.add(dataReceived);
   
   Element script = new Element.tag("script");
-  script.src = "https://ajax.googleapis.com/ajax/services/search/news?v=1.0&q=barack%20obama&callback=callbackForJsopApi";
+  script.src = "https://ajax.googleapis.com/ajax/services/search/news?v=1.0&q=barack%20obama&callback=callbackForJsonpApi";
   document.body.elements.add(script);
 }
