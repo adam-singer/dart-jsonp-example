@@ -10,7 +10,7 @@ dartCallback(String data) {
     <div> 
       <div>${newsItem['title']}</div>
       <div>${newsItem['content']}</div>
-      <div><a href="${newsItem['url']}" >Full Story</a></div>
+      <div><a href="${newsItem['signedRedirectUrl']}" >Full Story</a></div>
       <br/>
     </div>"""));
   });

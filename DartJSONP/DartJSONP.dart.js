@@ -2998,7 +2998,7 @@ function dartCallback(data) {
   var obj = json_JSON.parse(data);
   print$(obj.$index("responseData"));
   obj.$index("responseData").$index("results").forEach((function (newsItem) {
-    get$$document().get$body().get$elements().add(_ElementFactoryProvider.Element$html$factory(("    <div> \n      <div>" + newsItem.$index("title") + "</div>\n      <div>" + newsItem.$index("content") + "</div>\n      <div><a href=\"" + newsItem.$index("url") + "\" >Full Story</a></div>\n      <br/>\n    </div>")));
+    get$$document().get$body().get$elements().add(_ElementFactoryProvider.Element$html$factory(("    <div> \n      <div>" + newsItem.$index("title") + "</div>\n      <div>" + newsItem.$index("content") + "</div>\n      <div><a href=\"" + newsItem.$index("signedRedirectUrl") + "\" >Full Story</a></div>\n      <br/>\n    </div>")));
   })
   );
 }
