@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Dartium JSONP</title>
+  </head>
+  <body>
+    <h1>Dartium JSONP</h1>
+    <script type="text/javascript">
+	function callbackForJsopApi(s) {
+	  window.postMessage( JSON.stringify(s), '*');
+	}
+	</script>
+    <script type="application/dart" src="DartiumJSONP.dart"></script>
+    <script src="http://dart.googlecode.com/svn/branches/bleeding_edge/dart/client/dart.js"></script>
+  </body>
+</html>
